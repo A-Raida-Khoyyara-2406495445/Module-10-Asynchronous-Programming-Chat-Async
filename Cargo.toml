@@ -1,0 +1,18 @@
+[package]
+name = "chat-server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tokio-websockets = { version = "0.8", features = ["client", "server", "sha1_smol", "fastrand"] }
+futures-util = { version = "0.3", features = ["sink"] }
+http = "1"
