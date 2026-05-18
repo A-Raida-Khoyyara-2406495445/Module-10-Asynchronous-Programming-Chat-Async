@@ -7,7 +7,7 @@ use tokio_websockets::{ClientBuilder, Message};
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     let (mut ws_stream, _) =
-        ClientBuilder::from_uri("ws://127.0.0.1:2000".parse().unwrap())
+        ClientBuilder::from_uri("ws://127.0.0.1:8080".parse().unwrap())
             .connect()
             .await?;
 
